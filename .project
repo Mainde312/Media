@@ -1,11 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<projectDescription>
-	<name>Media</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-	</buildSpec>
-	<natures>
-	</natures>
-</projectDescription>
+import javax.swing.JOptionPane;
+
+public class mediahsm {
+
+	public static void main(String[] args) 
+	{
+		
+		String nome,n1, n2, n3;
+		double nota1, nota2, nota3, media;
+
+		nome = JOptionPane.showInputDialog("digite o nome");
+		
+		
+		n1 = JOptionPane.showInputDialog("digite a primeira nota");
+		nota1 = Double.parseDouble(n1);
+		
+		n2 = JOptionPane.showInputDialog("Digite a segunda nota");
+		nota2 = Double.parseDouble(n2); 
+		
+		n3 = JOptionPane.showInputDialog("Digite a terceira nota");
+		nota3 = Double.parseDouble(n3); 
+		
+		media = (nota1+nota2+nota3)/3;
+		
+		if (media>=8)
+		{
+			JOptionPane.showMessageDialog(null,"Aluno:" +nome+"\n\n" +"A média e: "+media,"Aprovado", JOptionPane.INFORMATION_MESSAGE);
+		}
+		else 
+		{
+			JOptionPane.showMessageDialog(null,"Aluno:" +nome+ "\n\n " +"A media e: "+media,"Reprovado", JOptionPane.INFORMATION_MESSAGE);
+		}
+	}
+
+}
+
